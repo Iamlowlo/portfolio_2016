@@ -1,2 +1,28 @@
 @import "variables";
 @import "reset";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Passion+One');
+
+@import "components/main_header";
+@import "components/main_nav";
+@import "components/main_footer";
+
+body {
+	background-color: $polite_white;
+	font-family: $font_family-regular;
+	height: 100%;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+	font-family: $font_family-thick;
+	font-weight: normal;
+}
+
+.ember-application {
+	& > .ember-view {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 100%;
+	}
+}

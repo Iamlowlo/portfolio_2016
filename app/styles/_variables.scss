@@ -1,8 +1,13 @@
 /*
 	COLORS
 */
-$polite_white: #F2F2F2;
 $polite_black: #333;
+$polite_white: #F2F2F2;
+$polite_grey_1: mix($polite_black, $polite_white, 90%);
+$polite_grey_2: mix($polite_black, $polite_white, 70%);
+$polite_grey_3: mix($polite_black, $polite_white, 35%);
+$polite_grey_4: mix($polite_black, $polite_white, 10%);
+$deep_bluish_black: #16161A;
 
 $color_1-light: #426684;
 $color_1: #23425B;
@@ -15,3 +20,6 @@ $color_2-dark: #1E6358;
 $color_3-light: #6E4AA8;
 $color_3: #3F2072;
 $color_3-dark: #25153F;
+
+$font_family-thick: "Passion One", "Arial Black", sans-serif;
+$font_family-regular: "Open Sans", Arial, sans-serif;

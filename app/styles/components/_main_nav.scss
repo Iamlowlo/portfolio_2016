@@ -1,0 +1,68 @@
+.main_nav {
+	
+	&-hamb_trigger {
+		$line_width: 2px;
+		$trigger_size: 40px;
+		$trigger_padding: 8px;
+		background: $color_3-dark;
+		display: block;
+		height: $trigger_size;
+		position: relative;
+		width: $trigger_size;
+		&:before {
+			border-top: $line_width solid $polite_white;
+			border-bottom: $line_width solid $polite_white;
+			content: "";
+			display: block;
+			height: ($trigger_size / 2) - (1.25 * $trigger_padding) - (2 * $line_width);
+			left: $trigger_padding;
+			position: absolute;
+			top: $trigger_padding;
+			transition: transform 0.3s ease-in, height 0.3s ease-in, border-width 0.3s ease-in;
+			transform: rotate(0) translate(0, 0);
+			transform-origin: 0 0;
+			width: ($trigger_size - 2 * $trigger_padding);
+		}
+		&:after {
+			border-top: $line_width solid $polite_white;
+			border-bottom: $line_width solid $polite_white;
+			bottom: $trigger_padding;
+			content: "";
+			display: block;
+			height: ($trigger_size / 2) - (1.25 * $trigger_padding) - (2 * $line_width);
+			left: $trigger_padding;
+			position: absolute;
+			transition: transform 0.3s ease-in, height 0.3s ease-in, border-width 0.3s ease-in;
+			transform: rotate(0) translate(0, 0);
+			transform-origin: 0 0;
+			width: ($trigger_size - 2 * $trigger_padding);
+		}
+	}
+
+	&.opened &-hamb_trigger {
+		&:before {
+			height: 0;
+			border-width: 1px;
+			transform: rotate(45deg) translate(2px, -1px);
+			width: 30px;
+		}
+		&:after {
+			height: 0;
+			border-width: 1px;
+			transform: rotate(-45deg) translate(1px, 0px);
+			width: 30px;
+		}
+	}
+
+	&-link_list {
+		max-height: 0;
+		overflow: hidden;
+		position: absolute;
+		background: $polite_grey_2;
+		transition: max-height 0.3s ease-in;
+		width: 100%;
+	}
+	&.opened &-link_list {
+		max-height: 100px;
+	}
+}
