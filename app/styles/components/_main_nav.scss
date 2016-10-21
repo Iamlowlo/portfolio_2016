@@ -4,14 +4,15 @@
 		$line_width: 2px;
 		$trigger_size: 40px;
 		$trigger_padding: 8px;
-		background: $color_3-dark;
+		$hamb_color: $color_2;
+
 		display: block;
 		height: $trigger_size;
 		position: relative;
 		width: $trigger_size;
 		&:before {
-			border-top: $line_width solid $polite_white;
-			border-bottom: $line_width solid $polite_white;
+			border-top: $line_width solid $hamb_color;
+			border-bottom: $line_width solid $hamb_color;
 			content: "";
 			display: block;
 			height: ($trigger_size / 2) - (1.25 * $trigger_padding) - (2 * $line_width);
@@ -24,8 +25,8 @@
 			width: ($trigger_size - 2 * $trigger_padding);
 		}
 		&:after {
-			border-top: $line_width solid $polite_white;
-			border-bottom: $line_width solid $polite_white;
+			border-top: $line_width solid $hamb_color;
+			border-bottom: $line_width solid $hamb_color;
 			bottom: $trigger_padding;
 			content: "";
 			display: block;
@@ -58,11 +59,27 @@
 		max-height: 0;
 		overflow: hidden;
 		position: absolute;
-		background: $polite_grey_2;
+		background: $polite_grey_5;
 		transition: max-height 0.3s ease-in;
 		width: 100%;
 	}
 	&.opened &-link_list {
-		max-height: 100px;
+		max-height: 150px;
+	}
+
+	&-link {
+		display: block;
+		padding: 0.4em 0.8em;
+		border-top: 1px solid $polite_grey_4;
+		
+		&:last-child {
+			border-bottom: 1px solid $polite_grey_4;			
+		}
+
+		&:hover, &.active {
+			background: $color_1-light;
+			color: $polite_white;
+		}
+
 	}
 }
