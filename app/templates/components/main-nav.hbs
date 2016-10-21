@@ -1,9 +1,9 @@
 <nav>
 	<span class="main_nav-hamb_trigger" onclick={{action 'toogleNav'}} style></span>
 	<ul class="main_nav-link_list">
-		<li>Index</li>
-		<li>FrontEnd Dev</li>
-		<li>Graphic Design</li>
-		<li>Photography</li>
+		<li {{action 'toogleNav'}}>{{#link-to "index"}}Index{{/link-to}}</li>
+		<li {{action 'toogleNav'}}>{{#link-to "front-end-development"}}FrontEnd Dev{{/link-to}}</li>
+		<li {{action 'toogleNav'}}>{{#link-to "graphic-design"}}Graphic Design{{/link-to}}</li>
+		<li {{action 'toogleNav'}}>{{#link-to "photography"}}Photography{{/link-to}}</li>
 	</ul>
 </nav>
