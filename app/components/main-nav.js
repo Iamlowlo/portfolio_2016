@@ -8,7 +8,7 @@ export default Ember.Component.extend({
 		this.opened = false;
 	},
 	actions: {
-		toogleNav: function() {
+		toggleNav() {
 			this.toggleProperty('opened');
 		}
 	}

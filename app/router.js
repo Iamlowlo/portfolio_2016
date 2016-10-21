@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('front-end-development');
   this.route('graphic-design');
   this.route('photography');
+  this.route('section-link', {path: 'section-link/:section_id'});
 });
 
 export default Router;
