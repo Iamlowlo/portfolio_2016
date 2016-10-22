@@ -1,7 +1,61 @@
 .main_header {
 	background: $polite_grey_4;
-	color: $color_2;
+	border-bottom: $main_header-border_bottom_size solid $color_3;
+	color: $color_1;
 	position: relative;
+
+	h1{
+		//color: $polite_white;
+		font-family: $font_family-regular;
+		font-weight: 300;
+		a {
+			position: relative;
+			display: inline-block;
+			padding: 0.2em 1em;
+			margin: 0.5em 1em 0;
+			&:after,
+			&:before {
+				box-sizing: border-box;
+				position: absolute;
+				display: block;
+				content: attr(data-content);
+				top: 0;
+				overflow: hidden;
+				left: 0;
+			}
+			&:before {
+				color: $polite_white;
+				background: $color_3;
+				padding: 0.2em 0.05em;
+				height: 100%;
+				width: 0%;
+				transition: width 0.3s ease-in, padding 0.2s;
+			}
+			&:after {
+				color: $polite_grey_4;
+				font-weight: 600;
+				font-size: 0.96em;
+				letter-spacing: -0.013em;
+				background: $color_2;
+				padding: 0.05em 1em;
+				height: 0%;
+				width: 100%;
+				transition: height 0.2s ease-in 0.2s, padding 0.2s ease-in 0.2s;
+			}
+			&:hover {
+				&:before,
+				&:after {
+					padding: 0.2em 1em;
+				}
+				&:before {
+					width: 100%;
+				}
+				&:after {
+					height: 100%;
+				}
+			}
+		}
+	}
 
 	.main_nav-hamb_trigger {
 		bottom: 10px;
