@@ -9,27 +9,31 @@
 		font-family: $font_family-regular;
 		font-weight: 300;
 		a {
-			position: relative;
+			border-top: $main_header-border_bottom_size solid $color_3;
+			border-left: $main_header-border_bottom_size solid $color_3;
 			display: inline-block;
-			padding: 0.2em 1em;
 			margin: 0.5em 1em 0;
+			padding: 0.2em 1em;
+			position: relative;
 			&:after,
 			&:before {
 				box-sizing: border-box;
-				position: absolute;
 				display: block;
 				content: attr(data-content);
+				height: 100%;
+				left: 0;
 				top: 0;
 				overflow: hidden;
-				left: 0;
+				padding: 0.2em 1em;
+				position: absolute;
+				width: 100%;
 			}
 			&:before {
 				color: $polite_white;
 				background: $color_3;
-				padding: 0.2em 0.05em;
-				height: 100%;
-				width: 0%;
-				transition: width 0.3s ease-in, padding 0.2s;
+				transition: transform 0.3s ease-in;
+				transform-origin: center left;
+				transform: perspective(300px) rotate3d(0,0.1,0,90deg);
 			}
 			&:after {
 				color: $polite_grey_4;
@@ -37,21 +41,14 @@
 				font-size: 0.96em;
 				letter-spacing: -0.013em;
 				background: $color_2;
-				padding: 0.05em 1em;
-				height: 0%;
-				width: 100%;
-				transition: height 0.2s ease-in 0.2s, padding 0.2s ease-in 0.2s;
+				transform: perspective(300px) rotate3d(0.1,0,0,90deg);
+				transition: transform 0.2s ease-in 0.25s;
+				transform-origin: center top;
 			}
 			&:hover {
 				&:before,
-				&:after {
-					padding: 0.2em 1em;
-				}
-				&:before {
-					width: 100%;
-				}
-				&:after {
-					height: 100%;
+				&:after  {
+					transform: perspective(300px) rotate3d(0,0,0,90deg);
 				}
 			}
 		}
