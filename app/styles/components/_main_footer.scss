@@ -1,3 +1,21 @@
 .main_footer {
 	background: $polite_grey_4;
+	padding: 1em;
+	&-social_links {
+		&-list {
+			text-align: center;
+			li {
+				display: inline-block;
+			}
+		}
+		&-link {
+			color: $polite_white;
+			display: block;
+			font-size: 1.5em;
+			height: 2em;
+			padding: 0.3em;
+			text-align: center;
+			width: 2em;
+		}
+	}
 }

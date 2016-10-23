@@ -1,6 +1,9 @@
 @import "variables";
 @import "reset";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Passion+One');
+@import "fonts";
+
+@import "utils";
 
 @import "components/main_header";
 @import "components/main_nav";
