@@ -1,6 +1,8 @@
-<ul>
-	{{#each links as |link|}}
-		<li>{{#link-to link.link.route link.link.param }}{{link.title}}{{/link-to}}</li>
-	{{/each}}
-</ul>
+<ul class="landing_footer"><!--
+-->{{#each links as |link|}}<!--
+	--><li class="landing_footer-element">
+			{{#link-to link.link.route link.link.param class="landing_footer-link"}}<span class="landing_footer-title">{{link.title}}</span>{{/link-to}}
+		</li><!--
+-->{{/each}}<!--
+--></ul>
 {{yield}}
