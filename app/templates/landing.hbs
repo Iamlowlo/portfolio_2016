@@ -1,2 +1,4 @@
-{{landing-section}}
+{{#each model as |section|}}
+	{{landing-section section=section}}
+{{/each}}
 {{outlet}}

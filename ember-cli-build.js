@@ -22,5 +22,18 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import('vendor/icon_portfolio2016/fonts/icon_portfolio2016.eot', {
+    destDir: 'assets'
+  });
+  app.import('vendor/icon_portfolio2016/fonts/icon_portfolio2016.svg', {
+    destDir: 'assets'
+  });
+  app.import('vendor/icon_portfolio2016/fonts/icon_portfolio2016.ttf', {
+    destDir: 'assets'
+  });
+  app.import('vendor/icon_portfolio2016/fonts/icon_portfolio2016.woff', {
+    destDir: 'assets'
+  });
+
   return app.toTree();
 };

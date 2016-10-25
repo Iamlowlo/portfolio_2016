@@ -1,6 +1,9 @@
 @import "variables";
 @import "reset";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Passion+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Passion+One');
+@import "fonts";
+
+@import "utils";
 
 @import "components/main_header";
 @import "components/main_nav";
@@ -25,4 +28,10 @@ h4, h5, h6 {
 		justify-content: space-between;
 		min-height: 100%;
 	}
+}
+
+a {
+	color: $color_1-light;
+	text-decoration: none;
+	font-style: normal;
 }

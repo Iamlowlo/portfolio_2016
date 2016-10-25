@@ -1,5 +1,62 @@
 .main_header {
 	background: $polite_grey_4;
-	color: $color_2;
-	text-shadow: rgba($polite_white, 0.2) 1px 1px 0;
+	border-bottom: $main_header-border_bottom_size solid $color_3;
+	color: $color_1;
+	position: relative;
+
+	h1{
+		//color: $polite_white;
+		font-family: $font_family-regular;
+		font-weight: 300;
+		a {
+			border-top: $main_header-border_bottom_size solid $color_3;
+			border-left: $main_header-border_bottom_size solid $color_3;
+			display: inline-block;
+			margin: 0.5em 1em 0;
+			padding: 0.2em 1em;
+			position: relative;
+			&:after,
+			&:before {
+				box-sizing: border-box;
+				display: block;
+				content: attr(data-content);
+				height: 100%;
+				left: 0;
+				top: 0;
+				overflow: hidden;
+				padding: 0.2em 1em;
+				position: absolute;
+				width: 100%;
+			}
+			&:before {
+				color: $polite_white;
+				background: $color_3;
+				transition: transform 0.3s ease-in;
+				transform-origin: center left;
+				transform: perspective(300px) rotate3d(0,0.1,0,90deg);
+			}
+			&:after {
+				color: $polite_grey_4;
+				font-weight: 600;
+				font-size: 0.96em;
+				letter-spacing: -0.013em;
+				background: $color_2;
+				transform: perspective(300px) rotate3d(0.1,0,0,90deg);
+				transition: transform 0.2s ease-in 0.25s;
+				transform-origin: center top;
+			}
+			&:hover {
+				&:before,
+				&:after  {
+					transform: perspective(300px) rotate3d(0,0,0,90deg);
+				}
+			}
+		}
+	}
+
+	.main_nav-hamb_trigger {
+		bottom: 10px;
+		position: absolute;
+		right: 10px;
+	}
 }

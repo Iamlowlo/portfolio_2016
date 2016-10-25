@@ -1,2 +1,6 @@
-I'm a landing section footer
+<ul>
+	{{#each links as |link|}}
+		<li>{{#link-to link.link.route link.link.param }}{{link.title}}{{/link-to}}</li>
+	{{/each}}
+</ul>
 {{yield}}

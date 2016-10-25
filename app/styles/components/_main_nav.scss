@@ -4,53 +4,47 @@
 		$line_width: 2px;
 		$trigger_size: 40px;
 		$trigger_padding: 8px;
-		background: $color_3-dark;
+		$hamb_color: $color_2;
+
 		display: block;
+		cursor: pointer;
 		height: $trigger_size;
 		position: relative;
 		width: $trigger_size;
-		&:before {
-			border-top: $line_width solid $polite_white;
-			border-bottom: $line_width solid $polite_white;
+		&:before, 
+		&:after {
+			border-top: $line_width solid $hamb_color;
+			border-bottom: $line_width solid $hamb_color;
 			content: "";
 			display: block;
-			height: ($trigger_size / 2) - (1.25 * $trigger_padding) - (2 * $line_width);
+			height: (($trigger_size - (2 * $trigger_padding) - (4 * $line_width)) / 3) + (2 * $line_width);
 			left: $trigger_padding;
 			position: absolute;
-			top: $trigger_padding;
 			transition: transform 0.3s ease-in, height 0.3s ease-in, border-width 0.3s ease-in;
 			transform: rotate(0) translate(0, 0);
 			transform-origin: 0 0;
 			width: ($trigger_size - 2 * $trigger_padding);
 		}
+		&:before {
+			top: $trigger_padding;
+		}
 		&:after {
-			border-top: $line_width solid $polite_white;
-			border-bottom: $line_width solid $polite_white;
 			bottom: $trigger_padding;
-			content: "";
-			display: block;
-			height: ($trigger_size / 2) - (1.25 * $trigger_padding) - (2 * $line_width);
-			left: $trigger_padding;
-			position: absolute;
-			transition: transform 0.3s ease-in, height 0.3s ease-in, border-width 0.3s ease-in;
-			transform: rotate(0) translate(0, 0);
-			transform-origin: 0 0;
-			width: ($trigger_size - 2 * $trigger_padding);
 		}
 	}
 
 	&.opened &-hamb_trigger {
-		&:before {
-			height: 0;
-			border-width: 1px;
-			transform: rotate(45deg) translate(2px, -1px);
-			width: 30px;
-		}
+		&:before,
 		&:after {
 			height: 0;
 			border-width: 1px;
-			transform: rotate(-45deg) translate(1px, 0px);
 			width: 30px;
+		}
+		&:before {
+			transform: rotate(45deg) translate(2px, -1px);
+		}
+		&:after {
+			transform: rotate(-45deg) translate(1px, 0px);
 		}
 	}
 
@@ -58,11 +52,28 @@
 		max-height: 0;
 		overflow: hidden;
 		position: absolute;
-		background: $polite_grey_2;
+		background: $polite_grey_5;
+		margin-top: $main_header-border_bottom_size;
+		top: 100%;
 		transition: max-height 0.3s ease-in;
 		width: 100%;
 	}
 	&.opened &-link_list {
-		max-height: 100px;
+		max-height: 150px;
+	}
+
+	&-link {
+		display: block;
+		padding: 0.4em 0.8em;
+		border-bottom: 1px solid $polite_grey_4;			
+		
+		&:last-child {
+		}
+
+		&:hover, &.active {
+			background: $color_1-light;
+			color: $polite_white;
+		}
+
 	}
 }

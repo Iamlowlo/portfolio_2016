@@ -1,0 +1,24 @@
+.linkedin {
+	&_bg {
+		background-color: $color_linkedin;
+	}
+	&_color {
+		color: $color_linkedin;
+	}
+}
+.github {
+	&_bg {
+		background-color: $color_github;
+	}
+	&_color {
+		color: $color_github;
+	}
+}
+.stackoverflow {
+	&_bg {
+		background-color: $color_stackoverflow;	
+	}
+	&_color {
+		color: $color_stackoverflow;	
+	}
+}

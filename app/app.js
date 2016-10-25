@@ -14,5 +14,8 @@ App = Ember.Application.extend({
 });
 
 loadInitializers(App, config.modulePrefix);
+Ember.LinkComponent.reopen({
+  attributeBindings: ['data-content']
+});
 
 export default App;
