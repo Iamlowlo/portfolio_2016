@@ -57,6 +57,7 @@
 		top: 100%;
 		transition: max-height 0.3s ease-in;
 		width: 100%;
+		z-index: 1;
 	}
 	&.opened &-link_list {
 		max-height: 150px;
