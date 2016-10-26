@@ -71,7 +71,12 @@
 		&:last-child {
 		}
 
-		&:hover, &.active {
+		&:hover {
+			background: $color_1;
+			color: $polite_white;
+		}
+
+		&.active {
 			background: $color_1-light;
 			color: $polite_white;
 		}
