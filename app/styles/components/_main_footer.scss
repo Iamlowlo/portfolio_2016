@@ -1,9 +1,49 @@
 .main_footer {
 	background: $polite_grey_4;
 	padding: 1em;
+	text-align: center;
+
+	h1 {
+		color: $color_2
+	}
+	
+	&-email_me {
+		color: $color_3;
+		cursor: pointer;
+		display: inline-block;
+		font-style: normal;
+		overflow: hidden;
+		padding: 0.5em;
+		position: relative;
+		width: 10em;
+		&:hover {
+			&:after {
+				transform: translateX(-100%);
+			}
+		}
+		span {
+			display: inline-block;
+			margin-right: 0.1em;
+			margin-bottom: 0.2em;
+			vertical-align: middle;
+		}
+
+		&:after {
+			color: $polite_white;
+			background-color: $color_3;
+			content: attr(data-content);
+			display: block;
+			left: 100%;
+			padding: 0.5em;
+			position: absolute;
+			top: 0;
+		}
+	}
+
 	&-social_links {
 		&-list {
-			text-align: center;
+			padding: 0.5em;
+
 			li {
 				display: inline-block;
 			}
