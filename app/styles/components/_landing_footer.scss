@@ -1,0 +1,85 @@
+.landing_footer {
+  display: block;
+  height: $landing_footer-height;
+  margin-left: -8%;
+  margin-right: -16%;
+  overflow: hidden;
+
+  &:hover &-element{
+    &:nth-child(1) {
+      width: $landing_footer-weight_1 - 5%
+    }
+    &:nth-child(2) {
+      width: $landing_footer-weight_2 - 5%
+    }
+    &:nth-child(3) {
+      width: $landing_footer-weight_3 - 5%
+    }
+  }
+
+  &-element {
+    display: inline-block;
+    height: $landing_footer-height;
+    overflow: hidden;
+    transition: width 0.2s linear 0.1s;
+    transform: skewX(-25deg);
+    
+    &:nth-child(1){
+      width: $landing_footer-weight_1;
+      .landing_footer-link {
+        background:url(http://www.stefan-hefele.de/assets/images/9/Aktuelle%20Projekte_Irland-863787c9.jpg) no-repeat bottom center;
+        background-size: cover;
+        span {
+          left: 31%;
+        }
+      }
+      &:hover {
+        width: $landing_footer-weight_1 + 10% !important;
+      }
+    }
+    &:nth-child(2){
+      width: $landing_footer-weight_2;
+      &:hover {
+        width: $landing_footer-weight_2 + 10% !important;
+      }
+      .landing_footer-link {
+        background:url(http://www.stefan-hefele.de/assets/images/4/Aktuelle%20Projekte_Mallorca-c7dbb874.jpg) no-repeat bottom center;
+        background-size: cover;
+      }
+    }
+    &:nth-child(3){
+      width: $landing_footer-weight_3;
+      &:hover {
+        width: $landing_footer-weight_3 + 10% !important;
+      }
+     .landing_footer-link {
+       background:url(https://photos.smugmug.com/Photographs/The-quick-Galleries/Quick-Look-Landscapes/i-7R8THrZ/0/S/MK1_5399-Edit-S.jpg) no-repeat bottom center;
+       background-size: cover;
+      }
+    }
+
+    &:hover {
+      span {
+        font-size: $landing_footer-height;
+      }
+    }
+  }
+
+  &-link {
+    display: block;
+    height: 100%;
+    margin: 0 -20%;
+    position: relative;
+    transform: skewX(25deg);
+    width: 140%;
+  }
+
+  &-title {
+    color: $polite_white;
+    bottom: 0;
+    font-size: 2em;
+    left: 20%;
+    position: absolute;
+    transition: font-size 0.2s linear 0.1s;
+  }
+}

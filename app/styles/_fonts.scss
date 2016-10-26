@@ -24,18 +24,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow_circle_up:before {
-  content: "\ea41";
+.icon-mode_comment:before {
+  content: "\e253";
 }
-.icon-arrow_circle_right:before {
-  content: "\ea42";
+.icon-done:before {
+  content: "\e876";
 }
-.icon-arrow_circle_down:before {
-  content: "\ea43";
-}
-.icon-arrow_circle_left:before {
-  content: "\ea44";
-}
+
 .icon-github:before {
   content: "\eab0";
 }
@@ -45,34 +40,50 @@
 .icon-stackoverflow:before {
   content: "\ead0";
 }
-.icon-arrow_left_line:before {
-  content: "\e5c4";
-}
-.icon-arrow_down_line:before {
-  content: "\e5db";
-}
-.icon-arrow_right_line:before {
-  content: "\e5c8";
-}
-.icon-arrow_up_line:before {
-  content: "\e5d8";
-}
-.icon-done:before {
-  content: "\e876";
-}
-.icon-arrow_down:before {
-  content: "\e313";
-}
-.icon-arrow_left:before {
-  content: "\e314";
-}
-.icon-arrow_right:before {
-  content: "\e315";
-}
-.icon-arrow_up:before {
-  content: "\e316";
-}
-.icon-mode_comment:before {
-  content: "\e253";
-}
 
+.icon-arrow {
+  &_up {
+    &:before {
+      content: "\e316";
+    }
+    &_circle:before {
+      content: "\ea41";
+    }
+    &_line:before {
+      content: "\e5d8";
+    }
+  }
+  &_right {
+    &:before {
+      content: "\e315";
+    }
+    &_circle:before {
+      content: "\ea42";
+    }
+    &_line:before {
+      content: "\e5c8";
+    }
+  }
+  &_down {
+    &:before {
+      content: "\e313";
+    }
+    &_circle:before {
+      content: "\ea43";
+    }
+    &_line:before {
+      content: "\e5db";
+    }
+  }
+  &_left {
+    &:before {
+      content: "\e314";
+    }
+    &_circle:before {
+      content: "\ea44";
+    }
+    &_line:before {
+      content: "\e5c4";
+    }
+  }
+}

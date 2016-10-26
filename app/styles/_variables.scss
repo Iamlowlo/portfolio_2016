@@ -1,7 +1,7 @@
 /*
 	COLORS
 */
-$polite_black: #333;
+$polite_black: #111111;
 $polite_white: #F2F2F2;
 $polite_grey_1: mix($polite_black, $polite_white, 90%);
 $polite_grey_2: mix($polite_black, $polite_white, 80%);
@@ -10,9 +10,9 @@ $polite_grey_4: mix($polite_black, $polite_white, 10%);
 $polite_grey_5: mix($polite_black, $polite_white, 5%);
 $deep_bluish_black: #16161A;
 
-$color_1-light: #426684;
-$color_1: #23425B;
-$color_1-dark: #152430;
+$color_1-light: #4589C1;
+$color_1: #296DA5;
+$color_1-dark: #1F4E75;
 
 $color_2-light: #23AF98;
 $color_2: #0B7F6C;
@@ -31,3 +31,8 @@ $font_family-regular: "Open Sans", Arial, sans-serif;
 
 
 $main_header-border_bottom_size: 3px;
+
+$landing_footer-height: 8em;
+$landing_footer-weight_1: 33.5%;
+$landing_footer-weight_2: 28.5%;
+$landing_footer-weight_3: 38%;

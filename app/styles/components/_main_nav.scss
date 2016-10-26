@@ -57,6 +57,7 @@
 		top: 100%;
 		transition: max-height 0.3s ease-in;
 		width: 100%;
+		z-index: 1;
 	}
 	&.opened &-link_list {
 		max-height: 150px;
@@ -70,7 +71,12 @@
 		&:last-child {
 		}
 
-		&:hover, &.active {
+		&:hover {
+			background: $color_1;
+			color: $polite_white;
+		}
+
+		&.active {
 			background: $color_1-light;
 			color: $polite_white;
 		}
