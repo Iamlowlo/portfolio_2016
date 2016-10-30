@@ -1,13 +1,28 @@
 /*
+	BP VALUES
+*/
+//iphone5
+$screen_sm: 375px;
+//iphone6
+$screen_md: 736px;
+//ipad
+$screen_lg: 1200px;
+//Laptop
+$screen_xlg: 1600px;
+// FHD
+
+/*
 	COLORS
 */
 $polite_black: #111111;
 $polite_white: #F2F2F2;
 $polite_grey_1: mix($polite_black, $polite_white, 90%);
 $polite_grey_2: mix($polite_black, $polite_white, 80%);
-$polite_grey_3: mix($polite_black, $polite_white, 40%);
-$polite_grey_4: mix($polite_black, $polite_white, 10%);
-$polite_grey_5: mix($polite_black, $polite_white, 5%);
+$polite_grey_3: mix($polite_black, $polite_white, 75%);
+$polite_grey_4: mix($polite_black, $polite_white, 60%);
+$polite_grey_5: mix($polite_black, $polite_white, 30%);
+$polite_grey_6: mix($polite_black, $polite_white, 10%);
+$polite_grey_7: mix($polite_black, $polite_white, 5%);
 $deep_bluish_black: #16161A;
 
 $color_1-light: #4589C1;
@@ -26,9 +41,16 @@ $color_stackoverflow: #FE7A15;
 $color_github: #333;
 $color_linkedin: #0077B5;
 
+/*
+	FONT FAMILIES
+*/
+
 $font_family-thick: "Passion One", "Arial Black", sans-serif;
 $font_family-regular: "Open Sans", Arial, sans-serif;
 
+/*
+	COMPONENT CONFIG
+*/
 
 $main_header-border_bottom_size: 3px;
 
