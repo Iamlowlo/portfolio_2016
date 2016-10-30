@@ -1,10 +1,12 @@
 .main_nav {
+	$line_width: 2px;
+	$trigger_size: 40px;
+	$trigger_padding: 8px;
+	$hamb_color: $color_2;
+	$hamb_lines-height: (($trigger_size - (2 * $trigger_padding) - (4 * $line_width)) / 3) + (2 * $line_width);
+	$hamb_lines-width: ($trigger_size - 2 * $trigger_padding);
 	
 	&-hamb_trigger {
-		$line_width: 2px;
-		$trigger_size: 40px;
-		$trigger_padding: 8px;
-		$hamb_color: $color_2;
 
 		display: block;
 		cursor: pointer;
@@ -17,13 +19,13 @@
 			border-bottom: $line_width solid $hamb_color;
 			content: "";
 			display: block;
-			height: (($trigger_size - (2 * $trigger_padding) - (4 * $line_width)) / 3) + (2 * $line_width);
+			height: $hamb_lines-height;
 			left: $trigger_padding;
 			position: absolute;
 			transition: transform 0.3s ease-in, height 0.3s ease-in, border-width 0.3s ease-in;
 			transform: rotate(0) translate(0, 0);
 			transform-origin: 0 0;
-			width: ($trigger_size - 2 * $trigger_padding);
+			width: $hamb_lines-width;
 		}
 		&:before {
 			top: $trigger_padding;
@@ -38,7 +40,7 @@
 		&:after {
 			height: 0;
 			border-width: 1px;
-			width: 30px;
+			width: 1.25 * $hamb_lines-width;
 		}
 		&:before {
 			transform: rotate(45deg) translate(2px, -1px);
@@ -52,7 +54,8 @@
 		max-height: 0;
 		overflow: hidden;
 		position: absolute;
-		background: $polite_grey_5;
+		background: $polite_grey_7;
+		left: 0;
 		margin-top: $main_header-border_bottom_size;
 		top: 100%;
 		transition: max-height 0.3s ease-in;
@@ -61,25 +64,96 @@
 	}
 	&.opened &-link_list {
 		max-height: 150px;
+		border-bottom: 3px solid $color-3;
 	}
 
 	&-link {
 		display: block;
 		padding: 0.4em 0.8em;
-		border-bottom: 1px solid $polite_grey_4;			
+		border-bottom: 1px solid $polite_grey_5;			
 		
 		&:last-child {
+			border-bottom: none;
 		}
 
 		&:hover {
 			background: $color_1;
+			border-color: $color_1-dark;
 			color: $polite_white;
 		}
 
 		&.active {
 			background: $color_1-light;
+			border-color: $color_1-dark;
 			color: $polite_white;
 		}
+	}
+	@media (min-width: $screen_md) {
+		&-hamb_trigger {
+			height: $trigger_size * 1.5;
+			width: $trigger_size * 1.5;
+			
+			&:before, 
+			&:after {
+				height: $hamb_lines-height * 1.7;
+				width: $hamb_lines-width * 1.7;
+			}
+		}
 
+		&.opened &-hamb_trigger {
+			&:before, 
+			&:after {
+				width: $hamb_lines-width * 1.7 * 1.4;
+			}
+		}
+
+		&.opened &-link_list {
+			max-height: 235px;
+		}
+
+		&-link {
+			font-size: 1.2em;
+			padding: 0.8em 3em;
+		}
+	}
+	@media (min-width: $screen_lg) {
+		&-hamb_trigger {
+			display: none;
+		}
+		&-link_list {
+			background: none;
+			bottom: 0;
+			left: auto;
+			line-height: 0.9em;
+			margin-top: 0;
+			max-height: none;
+			right: 0;
+			overflow: visible;
+			text-align: right;
+			top: auto;
+			width: auto;
+			li {
+				display: inline-block;
+				transform: skewX(-25deg);
+				overflow: hidden;
+				border-left: 0.66666 * $main_header-border_bottom_size solid $color_3-light;
+			}
+		}
+		&.opened &-link_list {
+			border-bottom: none;
+		}
+		&-link {
+			transform: skewX(25deg);
+			&:hover, &.active {
+				background: none;
+			}
+			&:hover {
+				color: $color_1;
+			}
+			&.active {
+				color: $color_2;
+			}
+			font-weight: 600;
+		}
 	}
 }

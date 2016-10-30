@@ -1,6 +1,6 @@
 .landing_section {
-	background-color: $polite_black;
-	color: $polite_white;
+	background-color: $polite_grey_7;
+	color: $polite_grey_2;
 	padding: 2em 2em 0;
 
 	&-title {
@@ -46,5 +46,29 @@
 	footer {
 		margin: 0 -2em;
 		overflow: hidden;
+	}
+	@media (min-width: $screen_md) {
+		padding: 3em 4em 0;
+		&-title {
+			font-size: 2em;
+		}
+		&-text {
+			font-size: 3em;
+		}
+		footer {
+			margin: 0 -4em;
+		}
+	}
+	@media (min-width: $screen_lg) {
+		padding: 3.5em 12em 0;
+		&-title {
+			font-size: 1.8em;
+		}
+		&-text {
+			font-size: 4em;
+		}
+		footer {
+			margin: 0 -12em;
+		}
 	}
 }
