@@ -1,0 +1,35 @@
+.grid_view {
+	$grid_height: 8.5em;
+	$grid_gap: 1em;
+
+
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		padding: $grid_gap / 2;
+	}
+	&-element {
+		height: $grid_height;
+		padding: $grid_gap / 2;
+		width: 50%;
+		&:nth-child(3n+1) {
+			width: 100%;
+		}
+
+		&-link {
+			display: block;
+			position: relative;
+			height: 100%;
+			width: 100%;			
+		}
+
+		&-title {
+			position: absolute;
+			font-size: 3em;
+			font-family: $font_family-thick;
+			bottom: 0.1em;
+			left: 0.2em;
+			line-height: 0.9em;
+		}
+	}
+}

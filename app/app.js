@@ -6,7 +6,9 @@ import config from './config/environment';
 let App;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
-
+Ember.LinkComponent.reopen({
+  attributeBindings: ["style"]
+});
 App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,

@@ -1,0 +1,8 @@
+{{yield}}
+<ul class="grid_view-list">
+	{{#each feed as |feedItem|}}
+		<li class="grid_view-element">
+			{{#link-to feedItem.link.link feedItem.link.param class="grid_view-element-link" style="background-image: url({{feedItem.background}})"}}<span class="grid_view-element-title">{{feedItem.title}}</span>{{/link-to}}
+		</li>
+	{{/each}}
+</ul>
