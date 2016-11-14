@@ -6,6 +6,23 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    mediaQueries : {
+      screen_sm : {
+        name: 'screen_sm',
+        value: '375'
+      },
+      screen_md : {
+        name: 'screen_md',
+        value: '736'
+      },
+      screen_lg : {
+        name: 'screen_lg',
+        value: '1200'
+      },
+      screen_xlg : {
+        name: 'screen_xlg',
+        value: '1600'
+      }},
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
