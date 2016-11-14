@@ -2,6 +2,7 @@
 	$grid_height: 8.5em;
 	$grid_gap: 1em;
 
+	// max-width: 620px;
 
 	&-list {
 		display: flex;
@@ -30,6 +31,39 @@
 			bottom: 0.1em;
 			left: 0.2em;
 			line-height: 0.9em;
+		}
+	}
+	@media (min-width: $screen_sm){
+		&-element {
+			height: $grid_height + 2.8em;
+		}
+	}
+	@media (min-width: $screen_md){
+		&-element {
+			width: 33.3333333%;
+			&:nth-child(3n+1) {
+				width: 66.6666666%;
+			}
+		}
+	}
+	@media (min-width: $screen_lg){
+		&-element {
+			width: 25%;
+			&:nth-child(3n+1) {
+				width: 50%;
+			}
+			&.pull_back_one {
+				background: red
+			}
+			&.pull_back_two {
+				background: blue
+			}
+			// &:nth-child(9n+4) {
+			// 	background: red
+			// }
+			// &:nth-child(9n+7) {
+			// 	background: blue
+			// }
 		}
 	}
 }
