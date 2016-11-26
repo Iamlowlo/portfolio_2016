@@ -16,26 +16,33 @@
 		&:nth-child(3n+1) {
 			width: 100%;
 		}
-
 		&-link {
 			display: block;
 			position: relative;
 			height: 100%;
-			width: 100%;			
+			width: 100%;
 		}
-
 		&-title {
-			position: absolute;
+			bottom: 0.1em;
+			color: $color_3;
+			background-color: rgba($polite_white, 0.7);
+			display: inline-block;
 			font-size: 3em;
 			font-family: $font_family-thick;
-			bottom: 0.1em;
-			left: 0.2em;
+			left: 0.1em;
 			line-height: 0.9em;
+			max-width: 90%;
+			padding: 0 0.1em;
+			position: absolute;
+			text-shadow: 0 0 1px $polite_white;
 		}
 	}
 	@media (min-width: $screen_sm){
 		&-element {
 			height: $grid_height + 2.8em;
+			&-title {
+				font-size: 3em;
+			}
 		}
 	}
 	@media (min-width: $screen_md){
@@ -45,6 +52,17 @@
 			height: $grid_height + 4.5em;
 			&:nth-child(3n+1) {
 				width: 66.6666666%;
+			}
+			&-title {
+				font-size: 3.5em;
+				transition: font-size 0.1s ease-in, line-height 0.1s ease-in, opacity 0.1s ease-in;
+			}
+			&:hover{
+				.grid_view-element-title {
+					font-size: 3.9em;
+					opacity: 0.5;
+					mix-blend-mode: hard-light;
+				}
 			}
 		}
 	}
@@ -65,12 +83,20 @@
 		}
 	}
 	@media (min-width: $screen_xlg){
-		&-element {
-			height: 15vw;
-		}
 		&-list {
 			margin-left: -1 * $grid_gap;
 			margin-right: -1 * $grid_gap;
+		}
+		&-element {
+			height: 15vw;
+			&-title {
+				font-size: 4.5em;
+			}
+			&:hover{
+				.grid_view-element-title {
+					font-size: 5em;
+				}
+			}
 		}
 	}
 }
