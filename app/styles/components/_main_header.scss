@@ -47,12 +47,6 @@
 			transition: transform 0.2s ease-in 0.25s;
 			transform-origin: center top;
 		}
-		&:hover {
-			&:before,
-			&:after  {
-				transform: perspective(300px) rotate3d(0,0,0,90deg);
-			}
-		}
 	}
 
 	.main_nav-hamb_trigger {
@@ -85,6 +79,20 @@
 		&-link {
 			border-top-width: 0.66666 * $main_header-border_bottom_size;
 			border-left-width: 0.66666 * $main_header-border_bottom_size;
+			&:hover {
+				color: $polite_white;
+				&:before,
+				&:after  {
+					transform: perspective(300px) rotate3d(0,0,0,90deg);
+				}
+			}
+		}
+	}
+	@media (min-width: $screen_xlg) {
+		padding-left: 12.5%;
+		padding-right: 12.5%;
+		&-link {
+			margin-left: 0;
 		}
 	}
 }

@@ -16,7 +16,7 @@ function createArrayForPullBack (size, rule) {
 }
 
 export default Ember.Component.extend({
-	classNames: ['grid_view'],
+	classNames: ['app_container','grid_view'],
 	init(){
 		this._super(...arguments);
 		this.set('mediaQueries', config.mediaQueries);
@@ -26,7 +26,7 @@ export default Ember.Component.extend({
 	},
 	didInsertElement() {
 		this._resizeHelper = function(){
-			this.set('width', this.$().innerWidth());
+			this.set('width', $(window).innerWidth());
 		}.bind(this);
 		$(window).on('resize', this._resizeHelper);
 		this._resizeHelper();
@@ -36,7 +36,8 @@ export default Ember.Component.extend({
 	},
 	breakPoint: Ember.computed('width', function(){
 		var width = this.get('width'),
-			breakPoint = _.findLast(this.mediaQueries, function(mq, index, mqs) { 
+			breakPoint = _.findLast(this.mediaQueries, function(mq) { 
+				console.log(width);
 				return width >= mq.value; 
 			});
 		return breakPoint ? breakPoint : _.find(this.mediaQueries, function(mq){ return mq; });

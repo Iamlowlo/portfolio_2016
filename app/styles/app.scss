@@ -39,3 +39,21 @@ a {
 	text-decoration: none;
 	font-style: normal;
 }
+
+main {
+	& > h1 {
+		font-family: $font_family-regular;
+		font-weight: 600;
+		letter-spacing: -0.05em;
+		line-height: 0.95em;
+		margin: 1em 1.1em 0.5em;
+
+		@media (min-width: $screen_md){
+			margin: 1.5em 1.8em 0.6em;
+		}
+
+		@media (min-width: $screen_lg){
+			margin: 1.5em 3.9em 0.6em;
+		}
+	}
+}

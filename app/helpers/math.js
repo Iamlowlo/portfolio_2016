@@ -7,22 +7,16 @@ export function math(params) {
 	switch (operator) {
 		case '+':
 			return firstVal + secondVal;
-			break;
 		case '-':
 			return firstVal - secondVal;
-			break;
 		case '*':
 			return firstVal * secondVal;
-			break;
 		case '/':
 			return firstVal / secondVal;
-			break;
 		case '%':
 			return firstVal % secondVal;
-			break;
 		default:
 			return firstVal + secondVal;
-			break;
 	}
 }
 

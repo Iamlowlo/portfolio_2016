@@ -39,16 +39,20 @@
 		}
 	}
 	@media (min-width: $screen_md){
+		margin: 0 2.8em;
 		&-element {
 			width: 33.3333333%;
+			height: $grid_height + 4.5em;
 			&:nth-child(3n+1) {
 				width: 66.6666666%;
 			}
 		}
 	}
 	@media (min-width: $screen_lg){
+		margin: 0 7em;
 		&-element {
 			width: 25%;
+			height: $grid_height + 6.3em;
 			&:nth-child(3n+1) {
 				width: 50%;
 			}
@@ -58,12 +62,15 @@
 			&.pull_back_two {
 				background: blue
 			}
-			// &:nth-child(9n+4) {
-			// 	background: red
-			// }
-			// &:nth-child(9n+7) {
-			// 	background: blue
-			// }
+		}
+	}
+	@media (min-width: $screen_xlg){
+		&-element {
+			height: 15vw;
+		}
+		&-list {
+			margin-left: -1 * $grid_gap;
+			margin-right: -1 * $grid_gap;
 		}
 	}
 }

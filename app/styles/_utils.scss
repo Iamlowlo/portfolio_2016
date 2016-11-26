@@ -22,3 +22,11 @@
 		color: $color_stackoverflow;	
 	}
 }
+
+@media (min-width: $screen_xlg) {
+	.app_container {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 75% !important;
+	}
+}

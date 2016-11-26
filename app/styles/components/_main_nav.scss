@@ -133,10 +133,11 @@
 			top: auto;
 			width: auto;
 			li {
-				display: inline-block;
-				transform: skewX(-25deg);
-				overflow: hidden;
 				border-left: 0.66666 * $main_header-border_bottom_size solid $color_3-light;
+				display: inline-block;
+				overflow: hidden;
+				transform: skewX(-25deg);
+				vertical-align: bottom;
 			}
 		}
 		&.opened &-link_list {
@@ -144,6 +145,7 @@
 		}
 		&-link {
 			transform: skewX(25deg);
+			padding: 0.8em 1.2em 0.7em;
 			&:hover, &.active {
 				background: none;
 			}
@@ -154,6 +156,12 @@
 				color: $color_2;
 			}
 			font-weight: 600;
+		}
+	}
+	@media (min-width: $screen_xlg) {
+		&-link_list {
+			right: 12.5%;
+			margin-right: -1.5em;
 		}
 	}
 }
