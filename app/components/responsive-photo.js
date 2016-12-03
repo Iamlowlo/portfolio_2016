@@ -3,6 +3,9 @@ import _ from 'lodash/lodash';
 import config from './../config/environment';
 
 export default Ember.Component.extend({
+	classNames: ['responsive_photo'],
+	classNameBindings: ['isFullScreen:app_container'],
+	isFullScreen: false,
 	init() {
 		this._super(...arguments);
 		this.set('mediaQueries', config.mediaQueries);

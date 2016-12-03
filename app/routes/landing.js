@@ -91,7 +91,6 @@ export default Ember.Route.extend({
 	},
 	actions: {
 		willTransition(transition) {
-			console.log('transition',transition);
 			window.scroll(0,0);
 		}
 	}

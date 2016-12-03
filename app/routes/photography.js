@@ -114,10 +114,5 @@ export default Ember.Route.extend({
 
 		controller.set('queryParams', ['photo_id']);
 		controller.set('photo_id', 0);
-
-		controller.set('selectedPhotography',Ember.computed('model', 'photo_id', function(){
-			var photoId = this.get('photo_id');
-			return model.filterBy('id', (photoId) ? parseInt(photoId) : 0)[0];
-		}));
 	}
 });
