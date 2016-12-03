@@ -37,7 +37,6 @@ export default Ember.Component.extend({
 	breakPoint: Ember.computed('width', function(){
 		var width = this.get('width'),
 			breakPoint = _.findLast(this.mediaQueries, function(mq) { 
-				console.log(width);
 				return width >= mq.value; 
 			});
 		return breakPoint ? breakPoint : _.find(this.mediaQueries, function(mq){ return mq; });

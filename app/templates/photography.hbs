@@ -1,1 +1,8 @@
 {{outlet}}
+{{responsive-photo title=selectedPhotography.title urlList=selectedPhotography.urlList}}
+<ul>
+	{{#each model as |photo|}}
+		<li>{{#link-to 'photography' (query-params photo_id=photo.id)}}
+		<img src="{{photo.urlList.thumbnail}}" alt="{{photo.title}}">{{photo.title}}{{/link-to}}</li>
+	{{/each}}
+</ul>
