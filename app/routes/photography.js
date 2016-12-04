@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model(params) {
+	model() {
 		return [{
 			id: 0,
 			urlList: {
@@ -102,14 +102,14 @@ export default Ember.Route.extend({
 				screen_xlg: 'http://fakeimg.pl/1920x1080/25153F/F2F2F2'
 			},
 			title: 'Photo Title 9'
-		}]
+		}];
 	},
 	queryParams: {
 		photo_id: {
 			replace: true
 		}
 	},
-	setupController(controller, model, queryParams) {
+	setupController(controller, model) {
 		this._super(controller, model);
 
 		controller.set('queryParams', ['photo_id']);

@@ -10,6 +10,9 @@ export default Ember.Component.extend({
 	actions: {
 		toggleNav() {
 			this.toggleProperty('opened');
+		},
+		hideNav() {
+			this.set('opened', false);
 		}
 	}
 });
