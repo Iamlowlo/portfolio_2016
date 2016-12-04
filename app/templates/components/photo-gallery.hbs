@@ -1,7 +1,10 @@
 {{responsive-photo title=selectedPhotography.title urlList=selectedPhotography.urlList isFullScreen=true}}
-<ul>
-	{{#each photoList as |photo|}}
-		<li>{{#link-to 'photography' (query-params photo_id=photo.id)}}
-		<img src="{{photo.urlList.thumbnail}}" alt="{{photo.title}}">{{photo.title}}{{/link-to}}</li>
-	{{/each}}
+{{#thumbnail-menu}}
+<ul class="photo_gallery-thumnbail_menu">
+	{{#each photoList as |photo|}}{{!--
+	--}}<li class="photo_gallery-thumnbail_menu-element">
+		{{#link-to 'photography' (query-params photo_id=photo.id) class="photo_gallery-thumnbail_menu-link"}}
+		<img class="photo_gallery-thumnbail_menu-picture" src="{{photo.urlList.thumbnail}}" alt="{{photo.title}}">{{photo.title}}{{/link-to}}</li>{{!--
+--}}{{/each}}
 </ul>
+{{/thumbnail-menu}}

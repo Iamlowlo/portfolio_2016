@@ -1,4 +1,7 @@
 .photo_gallery {
+	position: relative;
+	min-height: 70vh;
+	
 	.responsive_photo {
 		$padding: 1em;
 		max-width: 100%;
@@ -12,6 +15,19 @@
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			overflow: hidden;
+		}
+	}
+	&-thumnbail_menu {
+		&-element {
+			width: 50%;
+			padding: 1em;
+			display: inline-block;
+		}
+		&-link {
+			display: block;
+		}
+		&-picture {
+			width: 100%;
 		}
 	}
 	@media (min-width: $screen_md) {
