@@ -12,13 +12,13 @@ export default Ember.Component.extend({
 	},
 	didInsertElement() {
 		this._resizeHelper = function(){
-			this.set('width', $(window).innerWidth());
+			this.set('width', this.$(window).innerWidth());
 		}.bind(this);
-		$(window).on('resize', this._resizeHelper);
+		this.$(window).on('resize', this._resizeHelper);
 		this._resizeHelper();
 	},
 	willDestroyElement() {
-		$(window).off('resize', this._resizeHelper);
+		this.$(window).off('resize', this._resizeHelper);
 	},
 	breakPoint: Ember.computed('width', function(){
 		var width = this.get('width'),
