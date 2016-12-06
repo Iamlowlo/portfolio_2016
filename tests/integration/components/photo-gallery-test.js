@@ -5,7 +5,7 @@ moduleForComponent('photo-gallery', 'Integration | Component | photo gallery', {
   integration: true
 });
 
-test('it renders', function(assert) {
+test('photo-gallery component renders properly', function(assert) {
 
   this.set('photo_id', 0);
   this.set('model', [{

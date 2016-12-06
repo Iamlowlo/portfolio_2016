@@ -30,6 +30,6 @@ export default Ember.Component.extend({
 	activePhoto: Ember.computed('breakPoint', 'urlList', function(){
 		var breakPoint = this.get('breakPoint'),
 			urlList = this.get('urlList');
-		return (breakPoint) ? urlList[breakPoint.name] : '';
+		return (breakPoint && urlList && urlList[breakPoint.name]) ? urlList[breakPoint.name] : '';
 	})
 });
