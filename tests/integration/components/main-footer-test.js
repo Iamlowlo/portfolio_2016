@@ -15,7 +15,7 @@ test('it renders', function(assert) {
     this.$().text()
       .replace(/[\r\n]+/g,' ')
       .replace(/\s{2,}/g,' ')
-      .trim(), 'I am Lowlo iamlowlo@gmail.com');
+      .trim(), 'I am Lowlo Email Me');
 
   // Template block usage, no yield shown:
   this.render(hbs`
@@ -25,5 +25,5 @@ test('it renders', function(assert) {
     this.$().text()
       .replace(/[\r\n]+/g,' ')
       .replace(/\s{2,}/g,' ')
-      .trim(), 'I am Lowlo iamlowlo@gmail.com');
+      .trim(), 'I am Lowlo Email Me');
 });

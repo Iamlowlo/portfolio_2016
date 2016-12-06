@@ -6,18 +6,7 @@ moduleForComponent('main-nav', 'Integration | Component | main nav', {
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{main-nav}}`);
-
-  assert.equal(
-    this.$().text()
-      .replace(/[\r\n]+/g,' ')
-      .replace(/\s{2,}/g,' ')
-      .trim(), 'Index FrontEnd Dev Graphic Design Photography');
-
-  // Template block usage:
   this.render(hbs`
     {{#main-nav}}
       template block text
@@ -28,5 +17,6 @@ test('it renders', function(assert) {
     this.$().text()
       .replace(/[\r\n]+/g,' ')
       .replace(/\s{2,}/g,' ')
-      .trim(), 'Index FrontEnd Dev Graphic Design Photography');
+      .trim(), 'IndexFrontEnd DevGraphic DesignPhotography', "It just renders the main links even used as a block");
+
 });
