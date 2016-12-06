@@ -11,13 +11,14 @@ const gridViewElement = Ember.Component.extend({
 	order: Ember.computed('breakPoint', function(){
 		var order = this.feedIndex,
 			breakPoint = this.get('breakPoint');
-		if (breakPoint.pullBackOneElements && _.includes(breakPoint.pullBackOneElements, this.feedIndex+1)) {
-			order+=2;
+		if (breakPoint) {
+			if (breakPoint.pullBackOneElements && _.includes(breakPoint.pullBackOneElements, this.feedIndex+1)) {
+				order+=2;
+			}
+			if (breakPoint.pullBackTwoElements && _.includes(breakPoint.pullBackTwoElements, this.feedIndex+1)) {
+				order+=3;
+			}
 		}
-		if (breakPoint.pullBackTwoElements && _.includes(breakPoint.pullBackTwoElements, this.feedIndex+1)) {
-			order+=3;
-		}
-		// (if (eq breakPoint 'screen_lg') (if (lodash-includes pullBackOneElements (math feedIndex '+' 1)) (math feedIndex '+' 1) feedIndex) feedIndex)
 		return order;
 	})
 });
